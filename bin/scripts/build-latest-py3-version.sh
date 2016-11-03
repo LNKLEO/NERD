@@ -1,13 +1,13 @@
 #!/bin/bash
 # project: Nerd Fonts (https://github.com/ryanoasis/nerd-fonts)
-# version: 0.8.0
+# version: 0.9.0
 # Executes the 2to3 conversion to generate latest py3 version of font patcher
 
 # Check for 2to3
 type 2to3 >/dev/null 2>&1 || {
-  echo >&2 "2to3 must be installed before running this script."
-  echo >&2 "Please see details at"
-  echo >&2 "https://docs.python.org/2/library/2to3.html"
+  echo >&2 "# 2to3 must be installed before running this script."
+  echo >&2 "# Please see details at"
+  echo >&2 "# https://docs.python.org/2/library/2to3.html"
   exit 1
 }
 
@@ -24,4 +24,4 @@ type 2to3 >/dev/null 2>&1 || {
 # from `/usr/bin/env python2` when it should
 # be `/usr/bin/env python3`
 # using 1 as line number and '%' as delimiter:
-sed -i '1s%.*%#!/usr/bin/env python3%' ../font-patcher-py3
+sed -i '1s%.*%#!/usr/bin/env python3%' ../../font-patcher-py3
