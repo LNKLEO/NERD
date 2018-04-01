@@ -7,175 +7,179 @@
 
 <div align="center">
 
-[![GitHub release][img-version-badge]][repo] [![Gitter][img-gitter-badge]][gitter] [![CodeClimate][img-code-climate-badge]][code-climate] [![Build Status][img-travis-ci]][travis-ci] [![Code of Conduct][coc-badge]][coc] [![PRs Welcome][prs-badge]][prs]  <a href="#patched-fonts" title=""><img src="https://raw.githubusercontent.com/wiki/ryanoasis/nerd-fonts/images/faux-shield-badge-os-logos.svg?sanitize=true" alt="Nerd Fonts - OS Support"></a> [![Twitter][twitter-badge]][twitter-intent]
+[![GitHub release][img-version-badge]][dépôt] [![Gitter][img-gitter-badge]][gitter] [![CodeClimate][img-code-climate-badge]][code-climate] [![Build Status][img-travis-ci]][travis-ci] [![Code of Conduct][coc-badge]][coc] [![PRs Welcome][prs-badge]][prs] [![Twitter][twitter-badge]][twitter-intent] <a href="#polices-disponibles" title=""><img src="https://raw.githubusercontent.com/wiki/ryanoasis/nerd-fonts/images/faux-shield-badge-os-logos.svg?sanitize=true" alt="VimDevIcons - Add Icons to Your Plugins"></a>
 
 </div>
 
 
-**Nerd Fonts** is a project that patches developer targeted fonts with a high number of glyphs (icons). Specifically to add a high number of extra glyphs from popular 'iconic fonts' such as [Font Awesome ➶][font-awesome], [Devicons ➶][vorillaz-devicons], [Octicons ➶][octicons], and [others](#glyph-sets).
+**Nerd Fonts** est un projet qui regroupe les polices ciblées par les développeurs proposant ainsi un nombre élevé de glyphes (icônes). Précisément pour ajouter un nombre élevé de glyphes supplémentaires à partir de « polices iconiques » populaires telles que [Font Awesome ➶][font-awesome], [Devicons ➶][vorillaz-devicons], [Octicons ➶][octicons], et [d'autres](#ensembles-de-glyphes).
 
-The following Sankey flow diagram shows the current glyph sets included:
+Le diagramme de Sankey suivant montre les ensembles de glyphes actuels inclus :
 
 <p align="center">
   <img src="images/sankey-glyphs-combined-diagram.svg" alt="@SankeyMATIC Diagram" />
 </p>
-<sub><i>Diagram created using <a href="http://sankeymatic.com/" title="SankeyMATIC (BETA): A Sankey diagram builder for everyone">@SankeyMATIC</a></i></sub>
+<sub><i>Diagramme créé avec <a href="http://sankeymatic.com/" title="SankeyMATIC (BETA): A Sankey diagram builder for everyone">@SankeyMATIC</a></i></sub>
 
 
 ## Quick Navigation
 
-| **[Latest Release ➶][release]** | **[Fonts](#patched-fonts)** | **[Patcher](#font-patcher)** | **[VimDevIcons ➶][vim-devicons]** | **[Font Package <br/>Downloads ➶][release]** |
+| **[Latest Release ➶][release]** | **[Fonts](#polices-disponibles)** | **[Patcher](#font-patcher)** | **[VimDevIcons ➶][vim-devicons]** | **[Font Package <br/>Downloads ➶][release]** |
 |:-------------------------------:|:---------------------------:|:----------------------------:|:---------------------------------:|:--------------------------------------------:|
-| [![fonts-logo-small][ql-1]][release] | [![fonts-logo-small][ql-2]](#patched-fonts) | [![patcher-logo-small][ql-3]](#font-patcher) | [![vim-devicons-logo-small][ql-4]][vim-devicons] | [![fonts-logo-small][ql-5]][release] |
+| [![fonts-logo-small][ql-1]][release] | [![fonts-logo-small][ql-2]](#polices-disponibles) | [![patcher-logo-small][ql-3]](#font-patcher) | [![vim-devicons-logo-small][ql-4]][vim-devicons] | [![fonts-logo-small][ql-5]][release] |
 
 
 ## Important Notices
-* `master` branch file paths are **not** considered stable. [Verify your repository URI references](#unstable-file-paths)
-* cloning this repository is **not** recommended unless you are going to be [contributing to development](#contributing)
+* La branche `master` **n'est pas** considérée comme stable. [Vérifiez votre branche de référence](#unstable-file-paths)
+* Cloner ce dépôt **n'est pas** recommandé sauf si vous souhaitez [contribuer au développement](#contributing)
 
 
-## Table of Contents
+## Table des matières
 
 [**TL;DR**](#tldr)
 
-[**Installation Options**](#font-installation)
-  * [**1 - Manual**](#option-1-download-and-install-manually)
-  * [**2 - Release Archive Download**](#option-2-release-archive-download)
+[**Options d'installation**](#installation-de-police)
+  * [**1 - Manuel**](#option-1-download-and-install-manually)
+  * [**2 - Téléchargement d'une archive de release**](#option-2-release-archive-download)
   * [**3 - Install Script**](#option-3-install-script)
   * [**4 - Homebrew Fonts (macOS (OS X))**](#option-4-homebrew-fonts)
-  * [**5 - Clone Repo**](#option-5-clone-the-repo)
-  * [**6 - Ad Hoc Curl Download**](#option-6-ad-hoc-curl-download)
-  * [**7 - Arch User Repository (AUR) (Arch Linux)**](#option-7-unofficial-arch-user-repository-aur)
-  * [**8 - Patch Your Own Font**](#option-8-patch-your-own-font)
+  * [**5 - Cloner le dépôt**](#option-5-clone-the-repo)
+  * [**6 - Téléchargement Ad Hoc avec Curl*](#option-6-ad-hoc-curl-download)
+  * [**7 - Non-officiel Arch User dépôt (AUR)**](#option-7-unofficial-arch-user-repository-aur)
+  * [**8 - Générer votre propre police**](#option-8-patch-your-own-font)
 
-[**Features**](#features)
+[**Fonctionnalités**](#features)
   * [**Glyph/Icon sets**](#glyph-sets)
-  * [**Patched Fonts**](#patched-fonts)
+  * [**Polices générées**](#polices-disponibles)
   * [**Combinations**](#combinations)
-  * [**Font Patcher**](#font-patcher)
+  * [**Générateur de police**](#font-patcher)
 
-[**Developer / Contributor**](#font-patcher)
-  * [**Font Patcher**](#font-patcher)
+[**Développeur/Contributeur**](#font-patcher)
+  * [**Générateur de police**](#font-patcher)
   * [**Gotta Patch 'em All Font Patcher!**](#gotta-patch-em-all)
-  * [**Other Good Fonts to Patch**](#other-good-fonts-to-patch)
-  * [**Contributing**](#contributing)
+  * [**D'autres bonnes polices à ajouter**](#other-good-fonts-to-patch)
+  * [**Contribuer**](#contributing)
 
-[**Project Motivation**](#project-motivation)
+[**Motivation du projet**](#project-motivation)
 
-**Additional Info**
-  * [**Unstable file paths on master**](#unstable-file-paths)
+**Informations additionnelles**
+  * [**Instabilité des chemins de fichiers sur master**](#unstable-file-paths)
   * [**Changelog**](#changelog)
-  * [**License**](#license)
+  * [**Licence**](#licence)
 
 
 ## TL;DR
-  Nerd Fonts takes popular programming fonts and adds a bunch of Glyphs.
+  Nerd Fonts récupère des polices de programmation populaires et ajoute de nombreux glyphes.
   There is also a [font patcher](#font-patcher) available if your desired font isn't already patched.
-  For more high level information see the [wiki][wiki]. If you are looking for the Vim plugin see [VimDevIcons ➶][vim-devicons].
+  Un [généreur de polices](#font-patcher) est aussi disponible si vous souhaitez ajouter une police non présente.
+  Pour plus d'informations précises, vous pouvez consulter le [wiki][wiki]. Plugin vim disponible ici : [VimDevIcons ➶][vim-devicons].
 
-### Various Download Options for Fonts
+### Plusieurs options de téléchargement des polices
 
-_If you..._
+_Si vous..._
 
-  * `Option 1.` want to **quickly** grab an **individual font** download from the [`patched-fonts/` directory](#patched-fonts)
-  * `Option 2.` want to download a **font family** package of variations (bold, italic, etc.) see [download an archive](#option-2-release-archive-download)
-  * `Option 3.` want to **automate** installing or use in **scripts** see the [Install Script](#option-3-install-script)
-  * `Option 4.` are on **macOS** and want to use **Homebrew** see [Homebrew Fonts](#option-4-homebrew-fonts)
-  * `Option 5.` want **complete control** then see [cloning the repo](#option-5-clone-the-repo)
-  * `Option 6.` want to use **`curl` command** or use in **scripts** see [Ad Hoc Curl Download](#option-6-ad-hoc-curl-download)
-  * `Option 7.` are on **Arch Linux** and want to use **AUR packages** see [Unofficial Arch User Repositories](#option-7-unofficial-arch-user-repository-aur)
-  * `Option 8.` want to patch your own font see the [Font Patcher](#option-8-patch-your-own-font)
+  * `Option 1.` voulez récupérer **rapidement** une **police individuelle** téléchargée depuis le [dossier `patched-fonts/`](#polices-disponibles)
+  * `Option 2.` voulez télécharger un package de **famille de polices** ainsi que ses variations (bold, italic, etc.), voir [télécharger une archive](#option-2-release-archive-download)
+  * `Option 3.` voulez une installation **automatique** ou utiliser des **scripts**, voir [Installation via un script](#option-3-install-script)
+  * `Option 4.` vous êtes sur **macOS** et que vous voulez utiliser **Homebrew**, voir [Homebrew Fonts](#option-4-homebrew-fonts)
+  * `Option 5.` voulez un **contrôle total**, voir [cloner le dépôt](#option-5-clone-the-repo)
+  * `Option 6.` voulez utiliser la **commande `curl`** ou pour l'utiliser via des **scripts**, voir [Téléchargement Ad Hoc avec Curl](#option-6-ad-hoc-curl-download)
+  * `Option 7.` êtes sur **Arch Linux** et que vous voulez utiliser les **AUR packages**, voir [Dépôts non-officiel Arch User](#option-7-unofficial-arch-user-repository-aur)
+  * `Option 8.` générer votre propre police [Générateur de police](#option-8-patch-your-own-font)
 
-## Features
-* A [FontForge Python script](#font-patcher) to patch any font
+## Fonctionnalités
+* Un [script Python FontForge](#font-patcher) pour générer n'importe quelle police
   * Includes an option to create **Monospaced (fixed-pitch, fixed-width)** _or_ **double-width (non-monospaced)** glyphs
+  * Incluant une option permettant de créer des glyphes **Monospaced (fixed-pitch, fixed-width)** _ou_ **double-width (non-monospaced)**
   * For more details see the [**Font Patcher**](#font-patcher) section
-* **`43`** already [patched font families](#patched-fonts)
-* Over **`1,200,000`** unique combinations/variations of patched fonts [(more details)](#combinations)
-* Over **`1,600`** glyphs/icons combined [(more details)](#combinations)
-  * Current glyph sets include: [Powerline with Extra Symbols][ryanoasis-powerline-extra-symbols], [Font Awesome][font-awesome], [Material Design Icons][font-material-design-icons], [Weather][font-weather], [Devicons][vorillaz-devicons], [Octicons][octicons], [Font Logos][font-linux] (Formerly [Font Linux][font-linux]), [Pomicons][gabrielelana-pomicons]
-* **Monospaced (fixed-pitch, fixed-width)** _or_ **double-width (non-monospaced)** glyphs version of each font
-  * This refers to the Nerd Font glyphs themselves not necessarily the Font as a whole
-* A Developer/Contributor provided [bash script](#gotta-patch-em-all) to re-patch all the fonts
+  * Pour plus de détails, voir la section [**Générateur de font**](#font-patcher)
+* Déjà **`43`** [familles de polices générées](#polices-disponibles)
+* Plus de **`1,200,000`** unique variantes/combinaisons uniques de fonts générées [(plus de détail)](#combinations)
+* Plus de **`1,600`** glyphes/icones combinés [(plus de détail)](#combinations)
+  * Les ensembles de glyphes actuels incluent : [Powerline with Extra Symbols][ryanoasis-powerline-extra-symbols], [Font Awesome][font-awesome], [Material Design Icons][font-material-design-icons], [Weather][font-weather], [Devicons][vorillaz-devicons], [Octicons][octicons], [Font Logos][font-linux] (Anciennement [Font Linux][font-linux]), [Pomicons][gabrielelana-pomicons]
+* **Monospaced (fixed-pitch, fixed-width)** _ou_ **double-width (non-monospaced)** pour chaque version de glyphes de chaque police
+  * Ceci fait référence aux glyphes de Nerd Font et pas nécessairement à la police dans son ensemble
+* Un [script bash](#gotta-patch-em-all) fourni pour développeur/contributeur pour re-générer toutes les polices
 
 
-## Glyph Sets
+## Ensembles de glyphes
 
-:mag: :mag: You can now search for glyphs easily on [NerdFonts.com][Cheat Sheet] via the [Cheat Sheet][]
+:mag: :mag: Vous pouvez désormais rechercher facilement des glyphes sur [NerdFonts.com][Cheat Sheet] [via la table de référence][]
 
 ### Seti-UI + Custom
 > Based off of [Seti-UI] Icomoon with extra custom glyphs.
+> Basé sur [Seti-UI] Icomoon avec des glyphes supplémentaires.
 
-#### [:mag: :bookmark_tabs: See set on the NerdFonts.com Website](http://nerdfonts.com/?set=nf-custom-#cheat-sheet)
+#### [:mag: :bookmark_tabs: Voir l'ensemble sur le website NerdFonts.com](http://nerdfonts.com/?set=nf-custom-#cheat-sheet)
 
 ### [Devicons][vorillaz-devicons]
-> An iconic font made for developers, code jedis, ninjas, HTTPsters, evangelists and nerds(sic). / ([repo][vorillaz-devicons]) / ([website](https://vorillaz.github.io/devicons/))
+> Une police iconique faite pour les développeurs, jedis du code, ninjas, HTTPsters, evangelists et nerds(sic). / ([dépôt][vorillaz-devicons]) / ([website](https://vorillaz.github.io/devicons/))
 
-#### [:mag: :bookmark_tabs: See set on the NerdFonts.com Website](http://nerdfonts.com/?set=nf-dev-#cheat-sheet)
+#### [:mag: :bookmark_tabs: Voir l'ensemble sur le website NerdFonts.com](http://nerdfonts.com/?set=nf-dev-#cheat-sheet)
 
 ### [Font Awesome][font-awesome]
-> The iconic font and CSS toolkit. / ([repo][font-awesome]) / ([website](http://fontawesome.io/))
+> Une police iconique et une boîte à outils CSS. / ([dépôt][font-awesome]) / ([website](http://fontawesome.io/))
 
-#### [:mag: :bookmark_tabs: See set on the NerdFonts.com Website](http://nerdfonts.com/?set=nf-fa-#cheat-sheet)
+#### [:mag: :bookmark_tabs: Voir l'ensemble sur le website NerdFonts.com](http://nerdfonts.com/?set=nf-fa-#cheat-sheet)
 
 ### [Font Awesome Extension][font-awesome-extension]
-> Simple Font Awesome Extension. / ([repo][font-awesome-extension]) / ([website](https://andrelzgava.github.io/font-awesome-extension/))
+> Extension de la police Font Awesome. / ([dépôt][font-awesome-extension]) / ([website](https://andrelzgava.github.io/font-awesome-extension/))
 
-#### [:mag: :bookmark_tabs: See set on the NerdFonts.com Website](http://nerdfonts.com/?set=nf-fae-#cheat-sheet)
+#### [:mag: :bookmark_tabs: Voir l'ensemble sur le website NerdFonts.com](http://nerdfonts.com/?set=nf-fae-#cheat-sheet)
 
 ### [Material Design Icons][font-material-design-icons]
-> 2000+ Material Design Icons from the Community. / ([repo][font-material-design-icons]) / ([website](https://materialdesignicons.com/))
+> Plus de 2000 icônes Material Design. / ([dépôt][font-material-design-icons]) / ([website](https://materialdesignicons.com/))
 
-#### [:mag: :bookmark_tabs: See set on the NerdFonts.com Website](http://nerdfonts.com/?set=nf-mdi-#cheat-sheet)
+#### [:mag: :bookmark_tabs: Voir l'ensemble sur le website NerdFonts.com](http://nerdfonts.com/?set=nf-mdi-#cheat-sheet)
 
 ### [Weather][font-weather]
-> 215 Weather Themed Icons and CSS. / ([repo][font-weather]) / ([website](http://weathericons.io/))
+> 215 icônes et CSS sur le thème de la météo. / ([dépôt][font-weather]) / ([website](http://weathericons.io/))
 
-#### [:mag: :bookmark_tabs: See set on the NerdFonts.com Website](http://nerdfonts.com/?set=nf-weather-#cheat-sheet)
+#### [:mag: :bookmark_tabs: Voir l'ensemble sur le website NerdFonts.com](http://nerdfonts.com/?set=nf-weather-#cheat-sheet)
 
 ### [Octicons][octicons]
-> GitHub's icons. / ([repo][octicons]) / ([website](https://octicons.github.com))
+> Icônes GitHub. / ([dépôt][octicons]) / ([website](https://octicons.github.com))
 
-#### [:mag: :bookmark_tabs: See set on the NerdFonts.com Website](http://nerdfonts.com/?set=nf-oct-#cheat-sheet)*
+#### [:mag: :bookmark_tabs: Voir l'ensemble sur le website NerdFonts.com](http://nerdfonts.com/?set=nf-oct-#cheat-sheet)*
 
-<sub>* To avoid conflicts between icon sets, these were modified in the 'Complete' fonts. To view the original codepoints see the [Wiki](https://github.com/ryanoasis/nerd-fonts/wiki/Codepoint-Conflicts).</sub>
+<sub>* Pour éviter des conflits entre des jeux d'icônes, ceux-ci ont été modifiés dans les polices 'complètes'. Pour voir les codepoints originaux, voir le [Wiki](https://github.com/ryanoasis/nerd-fonts/wiki/Codepoint-Conflicts).</sub>
 
 ### [Powerline Extra Symbols][ryanoasis-powerline-extra-symbols]
-> Provides extra Powerline separator glyphs and a column number glyph (CN). / ([repo][ryanoasis-powerline-extra-symbols])
+> Fournit des glyphes de séparateur et un glyphe de numéro de colonne pour Powerline (CN). / ([dépôt][ryanoasis-powerline-extra-symbols])
 
-#### [:mag: :bookmark_tabs: See set on the NerdFonts.com Website](http://nerdfonts.com/?set=nf-ple-#cheat-sheet)
+#### [:mag: :bookmark_tabs: Voir l'ensemble sur le website NerdFonts.com](http://nerdfonts.com/?set=nf-ple-#cheat-sheet)
 
 ### [IEC Power Symbols][website-iecpower]
-> Adding new characters into Unicode / ([website][website-iecpower])
+> Ajoute de nouveaux caractères dans Unicode / ([website][website-iecpower])
 
-#### [:mag: :bookmark_tabs: See set on the NerdFonts.com Website](http://nerdfonts.com/?set=nf-iec-#cheat-sheet)
+#### [:mag: :bookmark_tabs: Voir l'ensemble sur le website NerdFonts.com](http://nerdfonts.com/?set=nf-iec-#cheat-sheet)
 
 ### [Font Logos][font-linux] (Formerly [Font Linux][font-linux])
-> Font-logos is an icon font containing logos of popular linux distributions and other open source software for inclusion in websites. / ([repo][font-linux])
+> Font-logos est une police d'icônes contenant des logos de distributions linux populaires et d'autres logiciels open source pour les inclure dans des sites web. / ([dépôt][font-linux])
 
-#### [:mag: :bookmark_tabs: See set on the NerdFonts.com Website](http://nerdfonts.com/?set=nf-linux-#cheat-sheet)
+#### [:mag: :bookmark_tabs: Voir l'ensemble sur le website NerdFonts.com](http://nerdfonts.com/?set=nf-linux-#cheat-sheet)
 
 ### [Pomicons][gabrielelana-pomicons]
-> 8 symbols for the ["Pomodoro Technique"®](https://cirillocompany.de/pages/pomodoro-technique). / ([repo][gabrielelana-pomicons])
+> 8 symboles pour la ["Pomodoro Technique"®](https://cirillocompany.de/pages/pomodoro-technique). / ([dépôt][gabrielelana-pomicons])
 
-#### [:mag: :bookmark_tabs: See set on the NerdFonts.com Website](http://nerdfonts.com/?set=nf-pom-#cheat-sheet)
+#### [:mag: :bookmark_tabs: Voir l'ensemble sur le website NerdFonts.com](http://nerdfonts.com/?set=nf-pom-#cheat-sheet)
 
-### Icon names in shell
+### Noms d'icônes en Shell
 
-Download provided `.sh` files from [bin/scripts/lib/](bin/scripts/lib/) directory somewhere, recommended locations are `~/.local/share/fonts/` or `~/bin/`.
+Le téléchargement fourni des fichiers `.sh` dans le dossier [bin/scripts/lib/](bin/scripts/lib/), les dossiers recommandés sont `~/.local/share/fonts/` ou `~/bin/`.
 
-- `i_all.sh` - helper to load all files you've downloaded at once
-- `i_dev.sh` - Devicons (198 icons, 8 does not have an established name)
-- `i_fa.sh` - Font Awesome (675 icons, 111 aliases)
-- `i_fae.sh` - Font Awesome Extension (170 icons)
-- `i_iec.sh` - IEC Power Symbols (5 icons)
-- `i_linux.sh` - Font Linux (20 icons)
-- `i_oct.sh` - Octicons (172 icons)
-- `i_ple.sh` - Powerline Extra Symbols (37 icons, 2 aliases, 16 does not have an established name)
-- `i_pom.sh` - Pomicons (11 icons)
-- `i_seti.sh` - Seti-UI + Custom (50 icons, 2 aliases, 5 does not have an established name)
+- `i_all.sh` - un helper pour charger tous les fichiers que vous avez téléchager d'un coup
+- `i_dev.sh` - Devicons (198 icônes, dont 8 qui n'ont pas de nom)
+- `i_fa.sh` - Font Awesome (675 icônes, 111 alias)
+- `i_fae.sh` - Font Awesome Extension (170 icônes)
+- `i_iec.sh` - IEC Power Symbols (5 icônes)
+- `i_linux.sh` - Font Linux (20 icônes)
+- `i_oct.sh` - Octicons (172 icônes)
+- `i_ple.sh` - Powerline Extra Symbols (37 icônes, 2 alias, dont 16 qui n'ont pas de nom)
+- `i_pom.sh` - Pomicons (11 icônes)
+- `i_seti.sh` - Seti-UI + Custom (50 icônes, 2 alias, dont 5 qui n'ont pas de nom)
 
-Then `source` the required file(s) and output `$i_*` variables to see icons:
+Puis `source` le(s) file(s) requis et afficher les variables `$i_*` pour voir les icônes :
 
 ```sh
 source ~/.local/share/fonts/i_oct.sh
@@ -184,12 +188,12 @@ echo $i_oct_heart
 # ♥
 ```
 
-**NOTE:** You have to use one of the Nerd Fonts to see correct icons for some icon sets (Devicons, Font Awesome Extension, Font Linux), but other sets should work with their standard fonts too.
+**NOTE :** Vous devez utiliser l'une des Nerd fonts pour voir les bonnes icônes de certains jeux d'icônes (Devicons, Font Awesome Extension, Font Linux), mais d'autres jeux devraient aussi fonctionner avec leurs polices standard.
 
 
-## Patched Fonts
+## Polices disponibles
 
-| Font Name                                         | Font Name and Repository          |\*RFN | EM Size | Status            |
+| Nom de la police                                  | Nom de la police et dépôt         |\*RFN | EM Size | Statut            |
 |:--------------------------------------------------|:----------------------------------|:-----|:--------|:------------------|
 | [3270 Nerd Font][p-3270]                          | [3270][f-3270]                    | NO   | 1000    | ![w] ![m2] ![l]   |
 | [Anonymice Nerd Font][p-anonymous-pro]            | [Anonymous Pro][f-a-pro]          | NO   | 2048    | ![w] ![m2] ![l]   |
@@ -236,17 +240,17 @@ echo $i_oct_heart
 | [Ubuntu Nerd Font][p-ubuntu]                      |                                   | NO   | 1000    | ![w] ![m2] ![l]   |
 | [Ubuntu Mono Nerd Font][p-ubuntu-mono]            |                                   | NO   | 1000    | ![w] ![m2] ![l]   |
 
-<sub>_*RFN = Reserved Font Name_</sub>
+<sub>_*RFN = Reserved Font Name (Nom de police réservé)_</sub>
 
-## Combinations
+## Combinaisons
 
-- Over **`1,200,000`** unique variations/combinations (Power Set) of patched fonts:
-  - **`43`** patched font typefaces
-  - **`596`** patched font families
-  - **`2,384`** 'complete' variations/combinations
-  - **`1,221,464`** _possible_ variations/combinations
-  - **`1,223,848`** total calculated combinations (2,384 + 1,221,464)
-- Combinations for each font are any combination of [Variations](#variations)
+- Plus de **`1,200,000`** variantes/combinaisons uniques de fonts générées :
+  - **`43`** polices de caractères
+  - **`596`** familles de polices
+  - **`2,384`** 'complètes' variantes/combinaisons
+  - **`1,221,464`** _possibles_ variantes/combinaisons
+  - **`1,223,848`** total des combinaisons calculées (2,384 + 1,221,464)
+- Les combinaisons pour chaque police sont une combinaison de [Variations](#variations)
 
 ### Variations
 
@@ -257,45 +261,45 @@ echo $i_oct_heart
 - [Material Design Icons][font-material-design-icons]
 - [Weather][font-weather]
 - [GitHub Octicons][octicons]
-- [Font Logos][font-linux] (Formerly [Font Linux][font-linux])
+- [Font Logos][font-linux] (Anciennement [Font Linux][font-linux])
 - [Powerline Extra Symbols][ryanoasis-powerline-extra-symbols]
 - [IEC Power Symbols][website-iecpower]
 - [Pomicons][gabrielelana-pomicons]
-- Windows Compatibility
+- Compatible avec Windows
 
 
-## Font Installation
+## Installation de police
 
-### `Option 1: Download and Install Manually`
+### `Option 1: Téléchargement et installion manuelle`
 
-> Best option for **quickly** getting a specific **individual font**.
+> Meilleure option pour l'installation **rapide** d'une **police spécifique individuelle**.
 
-Download the specific [patched font](#patched-fonts) of your choice
+Télécharger la [police générée](#polices-disponibles) spécifique de votre choix
 
-### `Option 2: Release Archive Download`
+### `Option 2: Téléchargement d'une archive de release`
 
-> Best option if you want an **archive** or complete **font family** of variations (Bold, Italic, etc.).
+> Meilleure option si vous voulez une **archive** ou une **police** complète ainsi que ses variations (Bold, Italic, etc.).
 
-Fonts are available for download as packages in the [latest release](https://github.com/ryanoasis/nerd-fonts/releases/latest)
+Les polices sont disponibles pour téléchargement au format archives dans la section [latest release](https://github.com/ryanoasis/nerd-fonts/releases/latest)
 
-### `Option 3: Install Script`
+### `Option 3: Installation via un script`
 
-> Best option if you want to **automate** installing or for use in **scripts**.
+> Meilleure option si vous voulez **automatiser** l'installation ou pour l'utilisation via des **scripts**.
 
-_Note_: Only for Linux & macOS (OS X)
-_Note_: **Requires cloning** the repo as of now
+_Note_: Seulement pour Linux & macOS (OS X)
+_Note_: **Requiert le clonage** du dépôt
 
-#### All fonts:
+#### Toutes les polices :
 
-* Installs all the patched Fonts (_Warning: This is a lot of Fonts adding up to a large size_)
+* Installation de toutes les polices (_Attention : Il y a beaucoup de polices, ce qui peut augmenter fortement la taille_)
 
 ```sh
 ./install.sh
 ```
 
-#### Single font:
+#### Police unique:
 
-* Installs a single Font of your choice
+* Installation d'une police unique de votre choix
 
 ```sh
 ./install.sh <FontName>
@@ -305,29 +309,29 @@ _Note_: **Requires cloning** the repo as of now
 
 ### `Option 4: Homebrew Fonts`
 
-> Best option if on **macOS** and want to use **Homebrew**.
+> La meilleure option si vous êtes sur **macOS** et que vous voulez utiliser **Homebrew**.
 
-All fonts are available via [Homebrew Fonts](https://github.com/caskroom/homebrew-fonts) on macOS (OS X)
+Toutes les polices sont disponibles via [Homebrew Fonts](https://github.com/caskroom/homebrew-fonts) sur macOS (OS X)
 
 ```sh
 brew tap caskroom/fonts
 brew cask install font-hack-nerd-font
 ```
 
-### `Option 5: Clone the Repo`
+### `Option 5: Cloner le dépôt`
 
-> Best option for **full control**, **all** or **most** of the fonts, or **contributing** to development.
+> La meilleure option pour un **contrôle total**, de **toutes** ou **la plupart** des polices, ou **contribuer** au développement.
 
-Cloning of this repository is **not** required nor efficient if you are simply only interested in a limited set of fonts.
+Cloner ce dépôt **n'est pas** requis ni efficace si vous êtes simplement intéressé par un ensemble limité de polices.
 
-However if you do want to clone the repo be sure to _shallow_ clone:
+Cependant, si vous voulez quand même cloner le dépôt, assurez-vous de le cloner _superficiellement_ :
 ```sh
 git clone --depth 1
 ```
 
-### `Option 6: Ad Hoc Curl Download`
+### `Option 6: Téléchargement Ad Hoc avec Curl`
 
-> Option if you want to use the **`curl` command** or for use in **scripts**.
+> Option si vous voulez utiliser la **commande `curl`** ou pour l'utiliser via des **scripts**.
 
 #### Linux
 
@@ -336,7 +340,7 @@ mkdir -p ~/.local/share/fonts
 cd ~/.local/share/fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complete.otf" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf
 ```
 
-_Note:_ deprecated alternative paths: `~/.fonts`
+_Note:_ chemins alternatifs dépréciés: `~/.fonts`
 
 #### macOS (OS X)
 
@@ -344,11 +348,11 @@ _Note:_ deprecated alternative paths: `~/.fonts`
 cd ~/Library/Fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complete.otf" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf
 ```
 
-### `Option 7: Unofficial Arch User Repository (AUR)`
+### `Option 7: Dépôts non-officiel Arch User (AUR)`
 
-> Option for **Arch Linux** and wanting to use **AUR packages**.
+> L'option pour **Arch Linux** et voulant utiliser les **AUR packages**.
 
-The following fonts are available via [AUR packages](https://aur.archlinux.org/) on Arch Linux:
+Les polices suivantes sont disponibles via [AUR packages](https://aur.archlinux.org/) sur Arch Linux:
 
 * [Nerd Fonts Complete (double-width)](https://aur.archlinux.org/packages/nerd-fonts-complete/)
 * [Nerd Fonts Complete (single-width)](https://aur.archlinux.org/packages/nerd-fonts-complete-mono-glyphs/)
@@ -356,33 +360,33 @@ The following fonts are available via [AUR packages](https://aur.archlinux.org/)
 * [Nerd Fonts Source Code Pro Complete](https://aur.archlinux.org/packages/nerd-fonts-source-code-pro/)
 * [Nerd Fonts Git (out of date)](https://aur.archlinux.org/packages/nerd-fonts-git/)
 
-### `Option 8: Patch Your Own Font`
+### `Option 8: Générer votre propre police`
 
-> The option for **patching** your **own font** or fully **customizing** the patched font.
+> L'option pour **générer** votre **propre police** ou **customiser** la police générée.
 
-Use the provided Python command line script to generate a patched font from your own font to get the extra new glyphs
+Utilisez le script en ligne de commande Python fourni pour générer une police corrigée à partir de votre propre police pour obtenir les nouveaux glyphes supplémentaires
 
-See: [Font Patcher](#font-patcher) for usage
+Voir: [Font Patcher](#font-patcher) pour utilisation
 
-* use this option if you do __not__ want to use one of the [fonts provided](#patched-fonts)
-* you will still need to copy the generated font to the correct font directory on your system
+* Utiliser cette option si vous ne voulez __pas__ utiliser l'une des [polices fournies](#polices-disponibles)
+* Vous devriez quand même copier la police générée dans le bon dossier de votre système
 
 
 <h2 align="center" id="font-patcher">
 	<img src="images/nerd-fonts-patcher-logo.png" alt="Nerd Fonts Patcher">
 </h2>
 
-Patching the font of your own choosing for use with the [VimDevIcons ➶][vim-devicons]:
-* requires: Python 2 (or Python 3), `python-fontforge` package (version `20141231` or later, see
-  the [install instructions](http://designwithfontforge.com/en-US/Installing_Fontforge.html))
-* alternative install method on OSX: `brew install fontforge`
-* Usage:
+Générer la police de votre choix pour l'utiliser avec [VimDevIcons ➶][vim-devicons]:
+* Requis : Python 2 (or Python 3), `python-fontforge` package (version `20141231` ou plus récente, voir
+  les [instructions d'installation](http://designwithfontforge.com/en-US/Installing_Fontforge.html))
+* Méthode alternative sur OSX : `brew install fontforge`
+* Utilisation:
 
 ```
 ./font-patcher PATH_TO_FONT
 ```
 
-* Alternative usage: Execute the patcher with the FontForge binary using the script flag:
+* Autre utilisation: Exécuter le patcher avec le binaire FontForge en utilisant l'option script
 
 ```
 ./fontforge -script font-patcher PATH_TO_FONT
@@ -451,7 +455,7 @@ optional arguments:
                         The directory to output the patched font file to
 ```
 
-#### Examples
+#### Exemples
 
 	./font-patcher Droid\ Sans\ Mono\ for\ Powerline.otf
 	./font-patcher Droid\ Sans\ Mono\ for\ Powerline.otf -s -q
@@ -467,54 +471,54 @@ optional arguments:
 <a name="gotta-patch-em-all"></a>
 ## Gotta Patch 'em All Font Patcher!
 
-* for Contributor or Developer use
+* Pour les contributeurs ou les développeurs
 
-* re-patches **all** fonts in the unpatched directory:
+* re-patches **toutes** les polices dans le dossier unpatched:
 ```
 ./gotta-patch-em-all-font-patcher\!.sh
 ```
 
-* can optionally limit to specific font name pattern:
+* pour limiter à un seul nom de police :
 ```
 ./gotta-patch-em-all-font-patcher\!.sh Hermit
 ```
 
 
-## Contributing
+## Contribuer
 
-See [contributing.md](contributing.md)
-
-
-## Unstable File Paths
-
-:warning: Warning: File paths may change based on releases (especially **major** version bumps)
-
-Reference the **release** branch and _not_ the ~~master~~ branch because paths are subject change for each release
-
-* For example:
-  * :white_check_mark: Use: <code>https\://github.com/ryanoasis/nerd-fonts/blob/<b>0.9.0</b>/patched-fonts/Hermit/Medium/complete/Hurmit%20Medium%20Nerd%20Font%20Complete.otf</code>
-  * :x: Instead of: <code>https\://github.com/ryanoasis/nerd-fonts/blob/<del>master</del>/patched-fonts/Hermit/Medium/complete/Hurmit%20Medium%20Nerd%20Font%20Complete.otf</code>
+Voir [contributing.md](contributing.md)
 
 
-## Other Good Fonts to Patch
+## Instabilité des chemins de fichiers
 
-* a list of additional good fonts to patch that I cannot provide or share due to the license:
- * [Input Mono][input-mono] (license restriction)
-   * Possibly coming with external hosting :)
- * [PragmataPro][pragmatapro] (not free)
- * [Consolas][consolas] (proprietary)
+:warning: Attention: Les chemins des fichiers peuvent changer en fonction des releases (notamment lors de releases **majeures**)
+
+Prendre en référence la branche **release** et _non_ la branche ~~master~~ car les chemins de fichiers sont sujets à modifications entre les releases
+
+* Par exemple:
+  * :white_check_mark: Utiliser : <code>https\://github.com/ryanoasis/nerd-fonts/blob/<b>0.9.0</b>/patched-fonts/Hermit/Medium/complete/Hurmit%20Medium%20Nerd%20Font%20Complete.otf</code>
+  * :x: Au lieu de : <code>https\://github.com/ryanoasis/nerd-fonts/blob/<del>master</del>/patched-fonts/Hermit/Medium/complete/Hurmit%20Medium%20Nerd%20Font%20Complete.otf</code>
 
 
-## Project Motivation
+## D'autres bonnes polices à ajouter
 
-See [Wiki: Project Purpose][wiki-project-purpose]
+* Une liste de bonnes polices supplémentaires à ajouter mais que je ne peux pas fournir ou partager en raison de leur licence :
+ * [Input Mono][input-mono] (restriction de licence)
+   * Peut-être avec un hébergement externe :)
+ * [PragmataPro][pragmatapro] (non gratuite)
+ * [Consolas][consolas] (propriétaire)
+
+
+## Motivation du projet
+
+Voir [Wiki: Project Purpose][wiki-project-purpose]
 
 
 ## Changelog
 
-See [changelog.md](changelog.md)
+Voir [changelog.md](changelog.md)
 
-## License
+## Licence
 
 [MIT](LICENSE) © Ryan L McIntyre
 
@@ -535,7 +539,7 @@ Repo References
 [ryanoasis-powerline-extra-symbols]:https://github.com/ryanoasis/powerline-extra-symbols
 [wiki]:https://github.com/ryanoasis/nerd-fonts/wiki
 [wiki-project-purpose]:https://github.com/ryanoasis/nerd-fonts/wiki/Project-Purpose
-[repo]:https://github.com/ryanoasis/nerd-fonts
+[dépôt]:https://github.com/ryanoasis/nerd-fonts
 [gitter]:https://gitter.im/ryanoasis/nerd-fonts
 [code-climate]:https://codeclimate.com/github/ryanoasis/nerd-fonts
 [travis-ci]:https://travis-ci.org/ryanoasis/nerd-fonts
@@ -675,4 +679,3 @@ Patched Font Statuses
 [m2]:https://github.com/ryanoasis/nerd-fonts/wiki/screenshots/v1.0.x/mac-unknown-sm.png "macOS (OSX) status is Unknown/Un-tested"
 
 [s-iosevka]:https://github.com/ryanoasis/nerd-fonts/issues/83
-
