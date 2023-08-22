@@ -1,0 +1,20 @@
+temp-glyph-source-fonts/*
+temp/*
+patched-fonts/Input*
+<<<<<<< HEAD
+=======
+check-fonts/*
+>>>>>>> upstream/master
+unpatched-sample-fonts/Input*
+casks/*
+archives/*
+private.cfg
+node_modules
+# Only apps should have lockfiles
+package-lock.json
+# generated *.uuid files
+*.uuid
+bin/scripts/name_parser/__pycache__/*
+bin/scripts/name_parser/log
+# This is just needed for the cheat sheet and not go into the repo:
+css/nerd-fonts-generated-removed.min.css
