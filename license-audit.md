@@ -39,4 +39,3 @@ All files created such as `font-patcher` and any `ph` or `sh` script/source file
 | Font          | License     |
 | ------------- | ----------- |
 | Cascadia Code | SIL OFL 1.1 |
-| Maple         | SIL OFL 1.1 |

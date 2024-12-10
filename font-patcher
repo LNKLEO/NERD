@@ -1432,8 +1432,6 @@ def main():
         ["CascadiaCode", "CascadiaNerd", "Cascadia", "Nerd"],
         ["CascadiaCode", "CascadiaCode", "Cascadia", "Code"],
         ["CascadiaMono", "CascadiaMono", "Cascadia", "Mono"],
-        ["MapleMono",    "MapleNerd",    "Maple",    "Nerd"],
-        ["MapleMono",    "MapleCode",    "Maple",    "Code"],
     ]
     for font in nfmapping:
         make_sure_path_exists("PatchedFonts/" + font[1])
